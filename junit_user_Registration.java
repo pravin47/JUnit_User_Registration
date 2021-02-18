@@ -11,7 +11,7 @@ public class JunitUserRegistrationSystem {
 
 		System.out.println("Enter The First Name First Latter Should Be Capital And Atleast 3 Letter Mandatory");
 		String fName = sc.next();
-		String regex = "[A-Z]{1}[a-z]{3,}";
+		String regex = "[A-Z]{1}[a-z]{2,}";
 		Pattern p = Pattern.compile(regex);
 		Matcher m = p.matcher(fName);
 		System.out.println("String Result Is :" + m.matches());
@@ -27,7 +27,7 @@ public class JunitUserRegistrationSystem {
 
 		System.out.println("Enter The Last Name First Letter Should Be Capital And Atleast 3 Letter Mandatory");
 		String lName = sc.next();
-		String regex = "[A-Z]{1}[a-z]{3,}";
+		String regex = "[A-Z]{1}[a-z]{2,}";
 		Pattern p = Pattern.compile(regex);
 		Matcher m = p.matcher(lName);
 		System.out.println("String Result Is:" + m.matches());
@@ -56,12 +56,29 @@ public class JunitUserRegistrationSystem {
 		}
 
 	}
+	public static void phoneNumber() {
+		
+		System.out.println("Enter The Mobile Number It Should Be Start From Country Code 91");
+		String phoneNumber = sc.next();
+		String regex = "[91]+[0-9]{9}"; 
+		Pattern p = Pattern.compile(regex);
+		Matcher m =p.matcher(phoneNumber);
+		System.out.println("String Result Is:" +m.matches());
+		boolean check = m.matches();
+		if(check == true) {
+			System.out.println("Enter The Phone Number Is Valid");
+		}else {
+			System.out.println("Enter The Phone Number is Invalid");
+		}
+	}
 
+	
 	public static void main(String args[]) {
 
 		fName();
 		lName();
-		email();
+		email(); 
+		phoneNumber();
 	}
 
 }

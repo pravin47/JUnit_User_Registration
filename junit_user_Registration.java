@@ -15,11 +15,35 @@ public class JunitUserRegistrationSystem {
 		Pattern p = Pattern.compile(regex);
 		Matcher m = p.matcher(fName);
 		System.out.println("String Result Is :" + m.matches());
+		boolean check = m.matches();
+		if (check == true) {
+			System.out.println("FIrst Name Is Valid");
+		} else {
+			System.out.println("First Name Is Invalid");
+		}
+	}
+
+	public static void lName() {
+
+		System.out.println("Enter The Last Name First Letter Should Be Capital And Atleast 3 Letter Mandatory");
+		String lName = sc.next();
+		String regex = "[A-Z]{1}[a-z]{3,}";
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(lName);
+		System.out.println("String Result Is:" + m.matches());
+		boolean check = m.matches();
+		if (check == true) {
+			System.out.println("Last Name Is Valid");
+		} else {
+			System.out.println("Last Name Is Invalid");
+
+		}
 	}
 
 	public static void main(String args[]) {
 
 		fName();
+		lName();
 	}
 
 }

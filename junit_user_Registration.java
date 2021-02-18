@@ -56,29 +56,46 @@ public class JunitUserRegistrationSystem {
 		}
 
 	}
+
 	public static void phoneNumber() {
-		
+
 		System.out.println("Enter The Mobile Number It Should Be Start From Country Code 91");
 		String phoneNumber = sc.next();
-		String regex = "[91]+[0-9]{9}"; 
+		String regex = "[91]+[0-9]{9}";
 		Pattern p = Pattern.compile(regex);
-		Matcher m =p.matcher(phoneNumber);
-		System.out.println("String Result Is:" +m.matches());
+		Matcher m = p.matcher(phoneNumber);
+		System.out.println("String Result Is:" + m.matches());
 		boolean check = m.matches();
-		if(check == true) {
+		if (check == true) {
 			System.out.println("Enter The Phone Number Is Valid");
-		}else {
+		} else {
 			System.out.println("Enter The Phone Number is Invalid");
 		}
 	}
 
-	
+	public static void password() {
+		System.out.print("Enter The 8 Character Password");
+		String password = sc.next();
+		String regex = "[A-Za-z0-9]{8,}";
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(password);
+		System.out.println("String Result Is:" + m.matches());
+		boolean check = m.matches();
+		if (check == true) {
+			System.out.println("Password Is Valid");
+		} else {
+			System.out.println("Password Is Invalid");
+		}
+
+	}
+
 	public static void main(String args[]) {
 
 		fName();
 		lName();
-		email(); 
+		email();
 		phoneNumber();
+		password();
 	}
 
 }

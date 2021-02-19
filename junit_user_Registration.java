@@ -74,9 +74,10 @@ public class JunitUserRegistrationSystem {
 	}
 
 	public static void password() {
-		System.out.print("Enter The 8 Character Password");
+		System.out.println("1 Enter The At Least 8 Character Password");
+		System.out.println("2 At Least One Upper Case");
 		String password = sc.next();
-		String regex = "[A-Za-z0-9]{8,}";
+		String regex = "[A-Z]+[a-z0-9]{8,}";
 		Pattern p = Pattern.compile(regex);
 		Matcher m = p.matcher(password);
 		System.out.println("String Result Is:" + m.matches());

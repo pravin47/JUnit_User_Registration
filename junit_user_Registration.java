@@ -67,15 +67,16 @@ public class JunitUserRegistrationSystem {
 		System.out.println("String Result Is:" + m.matches());
 		boolean check = m.matches();
 		if (check == true) {
-			System.out.println("Enter The Phone Number Is Valid");
+			System.out.println("Phone Number Is Valid");
 		} else {
-			System.out.println("Enter The Phone Number is Invalid");
+			System.out.println("Phone Number is Invalid");
 		}
 	}
 
 	public static void password() {
-		System.out.println("1 Enter The At Least 8 Character Password");
-		System.out.println("2 At Least One Upper Case");
+		System.out.print("1 Enter The At Least 8 Character Password");
+		System.out.print("2 At Least One Upper Case");
+		System.out.print("3 At Least One Numeric Number");
 		String password = sc.next();
 		String regex = "[A-Z]+[a-z0-9]{8,}";
 		Pattern p = Pattern.compile(regex);

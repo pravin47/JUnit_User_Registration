@@ -78,7 +78,7 @@ public class JunitUserRegistrationSystem {
 		System.out.print("2 At Least One Upper Case");
 		System.out.print("3 At Least One Numeric Number");
 		String password = sc.next();
-		String regex = "[A-Z]+[a-z0-9]{8,}";
+		String regex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#&$])(?=\\S+$).{8,}$";
 		Pattern p = Pattern.compile(regex);
 		Matcher m = p.matcher(password);
 		System.out.println("String Result Is:" + m.matches());

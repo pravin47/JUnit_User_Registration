@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class JunitUserRegistrationSystem {
 	static Scanner sc = new Scanner(System.in);
 
-	public static void fName() {
+	public static boolean fName() {
 
 		System.out.println("Enter The First Name First Latter Should Be Capital And Atleast 3 Letter Mandatory");
 		String fName = sc.next();
@@ -21,9 +21,10 @@ public class JunitUserRegistrationSystem {
 		} else {
 			System.out.println("First Name Is Invalid");
 		}
+		return check;
 	}
 
-	public static void lName() {
+	public static boolean lName() {
 
 		System.out.println("Enter The Last Name First Letter Should Be Capital And Atleast 3 Letter Mandatory");
 		String lName = sc.next();
@@ -38,9 +39,10 @@ public class JunitUserRegistrationSystem {
 			System.out.println("Last Name Is Invalid");
 
 		}
+		return check;
 	}
 
-	public static void email() {
+	public static boolean email() {
 
 		System.out.println("Enter the Valid Email Id");
 		String email = sc.next();
@@ -55,9 +57,10 @@ public class JunitUserRegistrationSystem {
 			System.out.println("Email Id Is Invalid");
 		}
 
+		return check;
 	}
 
-	public static void phoneNumber() {
+	public static boolean phoneNumber() {
 
 		System.out.println("Enter The Mobile Number It Should Be Start From Country Code 91");
 		String phoneNumber = sc.next();
@@ -71,9 +74,10 @@ public class JunitUserRegistrationSystem {
 		} else {
 			System.out.println("Phone Number is Invalid");
 		}
+		return check;
 	}
 
-	public static void password() {
+	public static boolean password() {
 		System.out.print("1 Enter The At Least 8 Character Password");
 		System.out.print("2 At Least One Upper Case");
 		System.out.print("3 At Least One Numeric Number");
@@ -88,7 +92,7 @@ public class JunitUserRegistrationSystem {
 		} else {
 			System.out.println("Password Is Invalid");
 		}
-
+		return check;
 	}
 
 	public static void main(String args[]) {
